@@ -2,9 +2,6 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * Created by Sascha on 04/01/2017.
- */
 public class MultiServer {
     private static Integer nextPort = 2000;
 

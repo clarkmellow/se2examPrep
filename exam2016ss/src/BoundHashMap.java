@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by Sascha on 11/01/2017.
- */
 public class BoundHashMap<K, V> extends HashMap<K, V> {
     public static final int MAX_SIZE = 5;
     private List<K> keys = new ArrayList<>();

@@ -1,9 +1,6 @@
 import java.io.IOException;
 import java.io.OutputStream;
 
-/**
- * Created by Sascha on 20/01/2017.
- */
 public class UnwriteOutputStream {
     private final OutputStream outputStream;
     private int lastWrite;

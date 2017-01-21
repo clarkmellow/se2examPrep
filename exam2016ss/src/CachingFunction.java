@@ -1,8 +1,5 @@
 import java.util.function.Function;
 
-/**
- * Created by Sascha on 11/01/2017.
- */
 public class CachingFunction<T, R> implements Function<T, R> {
     private final BoundHashMap<T, R> boundHashMap;
     private final Function<T, R> function;

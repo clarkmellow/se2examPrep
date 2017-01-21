@@ -3,9 +3,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by Sascha on 12/01/2017.
- */
 public class Pile<T> {
     /**
      * Hinweis: Laut Aufgabenstellung soll der Referenztyp "T" verwendet werden. Zur Vereinfachung wurde "Object" genommen.

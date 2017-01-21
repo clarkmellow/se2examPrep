@@ -2,9 +2,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-/**
- * Created by Sascha on 12/01/2017.
- */
 public class OUIS extends InputStream {
     final private List<Integer> numbers = new ArrayList<>();
     final private Comparator<Integer> comparator;

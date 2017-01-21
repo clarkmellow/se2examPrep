@@ -1,9 +1,6 @@
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class RingIterator<T> implements Iterator<T> {
     private int pos = 0;
     private List<? extends T> list;

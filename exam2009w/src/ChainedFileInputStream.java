@@ -1,9 +1,5 @@
 import java.io.*;
 
-
-/**
- * Created by Sascha on 20/01/2017.
- */
 public class ChainedFileInputStream extends InputStream {
     private final InputStream[] inputStreams;
     private int index;

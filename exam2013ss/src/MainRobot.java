@@ -1,6 +1,3 @@
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class MainRobot {
     public static void main(String[] args) {
         if (args.length != 1) throw new IllegalArgumentException();

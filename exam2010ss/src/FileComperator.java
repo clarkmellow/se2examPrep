@@ -3,9 +3,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Comparator;
 
-/**
- * Created by Sascha on 11/01/2017.
- */
 public class FileComperator implements Comparator<File> {
     public static void main(String[] args) {
         File file1 = new File("test.pptx");

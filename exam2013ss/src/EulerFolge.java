@@ -1,8 +1,5 @@
 import java.util.Iterator;
 
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class EulerFolge implements Iterable<Double> {
     private int n = 1;
 

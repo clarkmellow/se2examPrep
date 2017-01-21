@@ -2,9 +2,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/**
- * Created by Sascha on 20/01/2017.
- */
 public class Copier extends Thread {
 
     private final InputStream i;
@@ -17,7 +14,6 @@ public class Copier extends Thread {
 
     @Override
     public void run() {
-
         try {
             int write = i.read();
             while (write != -1) {

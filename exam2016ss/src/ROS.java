@@ -3,9 +3,6 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/**
- * Created by Sascha on 11/01/2017.
- */
 public class ROS extends FilterOutputStream {
     private long firstWrite;
     private long lastWrite;

@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Sascha on 11/01/2017.
- */
 public class RecursionPrimesLoop {
     public static List<Integer> primesLoop(int n) {
         if (n < 2) return null;

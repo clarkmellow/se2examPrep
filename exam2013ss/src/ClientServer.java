@@ -2,9 +2,6 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class ClientServer {
 
     public static void main(String[] args) throws InterruptedException {

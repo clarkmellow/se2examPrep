@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class MaxSizeQueue<T> {
     private final int maxSize;
     private final ArrayList<T> elements;

@@ -2,9 +2,6 @@ import java.io.FilterWriter;
 import java.io.IOException;
 import java.io.Writer;
 
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class CharFilterWriter extends FilterWriter {
     private final char excludedChar;
 

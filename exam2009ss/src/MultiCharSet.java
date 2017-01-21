@@ -1,9 +1,6 @@
 import java.util.Collection;
 import java.util.HashMap;
 
-/**
- * Created by Sascha on 20/01/2017.
- */
 public class MultiCharSet extends HashMap<Character, Long> {
 
     public long contains(char key) {

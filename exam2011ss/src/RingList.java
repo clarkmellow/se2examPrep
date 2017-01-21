@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collection;
 
-/**
- * Created by Sascha on 04/01/2017.
- */
 public class RingList<E> extends ArrayList<E> implements Ring<E> {
 
     public RingList() {

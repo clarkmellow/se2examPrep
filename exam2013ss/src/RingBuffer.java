@@ -1,9 +1,6 @@
 import java.util.Collection;
 import java.util.LinkedList;
 
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class RingBuffer<E> extends LinkedList<E> {
     private final int max;
 

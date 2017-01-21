@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-/**
- * Created by Sascha on 11/01/2017.
- */
 public class SetList<T> extends ArrayList<T> {
     public SetList() {
     }

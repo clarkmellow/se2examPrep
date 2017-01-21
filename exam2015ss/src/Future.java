@@ -1,6 +1,3 @@
-/**
- * Created by Sascha on 12/01/2017.
- */
 public class Future {
     private final Thread supplier;
     private Object result;

@@ -1,6 +1,3 @@
-/**
- * Created by Sascha on 02/01/2017.
- */
 public class ConsumerRobot extends Thread {
     final MaxSizeQueue<Part> queue;
 

@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 
-/**
- * Created by Sascha on 11/01/2017.
- */
 public class IPP extends Thread {
     public static final int N = 20;
     private static int counter = 0;

@@ -8,7 +8,6 @@ import java.net.Socket;
 import static java.lang.Thread.sleep;
 
 /**
- * Created by Sascha on 11/01/2017.
  * Testen mit folgendem Befehl: telnet localhost 57777
  * > Hallo <Enter drücken>
  * Ausgabe:
