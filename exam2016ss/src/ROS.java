@@ -1,5 +1,7 @@
-import java.io.*;
-import java.nio.file.Files;
+import java.io.FileOutputStream;
+import java.io.FilterOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 
 /**
  * Created by Sascha on 11/01/2017.
@@ -22,9 +24,20 @@ public class ROS extends FilterOutputStream {
         super(out);
     }
 
+    public static void main(String[] args) throws IOException {
+        long startTime = System.currentTimeMillis();
+        byte[] array = new byte[1024 * 1024];
+        try (ROS test = new ROS(new FileOutputStream("test1.vcf", true))) {
+            test.write(array);
+            System.out.println(test.getRate() + " bytes/second");
+        }
+        System.out.println("Duration: " + (System.currentTimeMillis() - startTime) / 1000);
+        System.out.println("Datarate: " + array.length / ((System.currentTimeMillis() - startTime) / 1000) + " bytes/second");
+    }
+
     @Override
     public void write(int b) throws IOException {
-        if(firstWrite == 0) firstWrite = System.currentTimeMillis();
+        if (firstWrite == 0) firstWrite = System.currentTimeMillis();
         sumBytes++;
         lastWrite = System.currentTimeMillis();
         super.write(b);
@@ -32,7 +45,7 @@ public class ROS extends FilterOutputStream {
 
     @Override
     public void write(byte[] b) throws IOException {
-        if(firstWrite == 0) firstWrite = System.currentTimeMillis();
+        if (firstWrite == 0) firstWrite = System.currentTimeMillis();
         sumBytes += b.length;
         lastWrite = System.currentTimeMillis();
         super.write(b);
@@ -40,27 +53,16 @@ public class ROS extends FilterOutputStream {
 
     @Override
     public void write(byte[] b, int off, int len) throws IOException {
-        if(firstWrite == 0) firstWrite = System.currentTimeMillis();
+        if (firstWrite == 0) firstWrite = System.currentTimeMillis();
         sumBytes += len;
         lastWrite = System.currentTimeMillis();
         super.write(b, off, len);
     }
 
-    public double getRate(){
-        long sendingDuration = lastWrite- firstWrite;
-        if(sendingDuration < 1000) return -1;
+    public double getRate() {
+        long sendingDuration = lastWrite - firstWrite;
+        if (sendingDuration < 1000) return -1;
 
-        return sumBytes/(sendingDuration/1000);
-    }
-
-    public static void main(String[] args) throws IOException {
-        long startTime = System.currentTimeMillis();
-        byte[] array = new byte[1024*1024];
-        try (ROS test = new ROS(new FileOutputStream("test1.vcf", true))){
-            test.write(array);
-            System.out.println(test.getRate()+ " bytes/second");
-        }
-        System.out.println("Duration: " + (System.currentTimeMillis()-startTime)/1000);
-        System.out.println("Datarate: " + array.length/((System.currentTimeMillis()-startTime)/1000)+" bytes/second");
+        return sumBytes / (sendingDuration / 1000);
     }
 }

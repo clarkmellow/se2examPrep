@@ -6,11 +6,11 @@ import java.util.*;
  * Created by Sascha on 12/01/2017.
  */
 public class OUIS extends InputStream {
-    // Objektvariablen
-    private boolean readCalled;
     final private List<Integer> numbers = new ArrayList<>();
     final private Comparator<Integer> comparator;
     final private Integer stopper;
+    // Objektvariablen
+    private boolean readCalled;
 
     public OUIS(Comparator<Integer> comparator, Integer stopper) {
         this.comparator = comparator;

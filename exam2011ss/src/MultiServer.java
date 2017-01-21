@@ -15,15 +15,17 @@ public class MultiServer {
                     File f = new File(arg);
                     int p;
                     //p = nextPort++;   // Bestandteil von Teilaufgabe a)
-                    synchronized (args) {p = nextPort++;} // Lösung von Teilaufgabe b)
+                    synchronized (args) {
+                        p = nextPort++;
+                    } // Lösung von Teilaufgabe b)
                     try {
                         ServerSocket ss = new ServerSocket(p);
-                        while(true) {
+                        while (true) {
                             Socket s = ss.accept();
                             OutputStream o = s.getOutputStream();
                             InputStream i = new FileInputStream(f);
                             int b = i.read();
-                            while (b >= 0){
+                            while (b >= 0) {
                                 o.write(b);
                                 b = i.read();
                             }

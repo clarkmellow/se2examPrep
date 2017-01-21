@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -43,7 +42,7 @@ public class RingIterator<T> implements Iterator<T> {
 
     @Override
     public void remove() {
-        if(list.size() == 0) return;
+        if (list.size() == 0) return;
 
         pos = pos - 1;
         if (pos < 0) {

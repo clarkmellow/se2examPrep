@@ -17,6 +17,16 @@ public class SetList<T> extends ArrayList<T> {
         addAll(c);
     }
 
+    public static void main(String[] args) {
+        SetList<String> sls = new SetList<>();
+        System.out.println(sls.add("foo") + " " + sls);
+        System.out.println(sls.add("bar") + " " + sls);
+        System.out.println(sls.add("foo") + " " + sls);
+        System.out.println(sls.set(0, "baz") + " " + sls);
+        System.out.println(sls.set(0, "bar") + " " + sls);
+        System.out.println(sls.size());
+    }
+
     public boolean add(T e) {
         if (contains(e)) return false;
 
@@ -47,15 +57,5 @@ public class SetList<T> extends ArrayList<T> {
             super.set(i, e);
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        SetList<String> sls = new SetList<>();
-        System.out.println(sls.add("foo") + " " + sls );
-        System.out.println(sls.add("bar") + " " + sls);
-        System.out.println(sls.add("foo") + " " + sls);
-        System.out.println(sls.set(0, "baz")+ " " + sls);
-        System.out.println(sls.set(0, "bar")+ " " + sls);
-        System.out.println(sls.size());
     }
 }
