@@ -15,6 +15,7 @@ public class EchoService extends Thread {
     @Override
     public void run() {
         System.out.println("Connection with: " + socket.getInetAddress().getHostName() + " from port " + socket.getPort());
+        System.out.println(socket.getChannel());
         try (Socket s = socket;
              InputStream reader = s.getInputStream();
              OutputStream writer = s.getOutputStream()) {
